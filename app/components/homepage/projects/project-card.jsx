@@ -1,7 +1,7 @@
 // @flow strict
 
+import Link from 'next/link';
 import * as React from 'react';
-
 function ProjectCard({ project }) {
 
   return (
@@ -59,6 +59,11 @@ function ProjectCard({ project }) {
           <div className="ml-4 lg:ml-8 mr-2">
             <span className="text-white">Description:</span>
             <span className="text-cyan-400">{' ' + project.description}</span>
+            <span className="text-gray-400">,</span>
+          </div>
+          <div>
+            <span className="ml-4 lg:ml-8 mr-2 text-white">Live Link: </span>
+            <span className="text-orange-400"><Link href = {project.demo}>Click me</Link></span>
             <span className="text-gray-400">,</span>
           </div>
           <div><span className="text-gray-400">{`};`}</span></div>
